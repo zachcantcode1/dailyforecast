@@ -7,11 +7,11 @@ WORKDIR /usr/src/app
 # RUN npm install -g pnpm
 
 # Copy package.json and package-lock.json (or pnpm-lock.yaml, yarn.lock)
-COPY package.json . 
-# COPY package-lock.json . 
+COPY package.json .
+COPY package-lock.json . 
 
 # Install dependencies
-RUN npm install --omit=dev
+RUN npm install
 # If you used pnpm: RUN pnpm install --prod
 # If you used yarn: RUN yarn install --production
 
@@ -20,6 +20,9 @@ COPY . .
 
 # Compile TypeScript to JavaScript
 RUN npm run build
+
+# Remove development dependencies after build
+RUN npm prune --production
 
 # Stage 2: Create the production image
 FROM node:20-slim
