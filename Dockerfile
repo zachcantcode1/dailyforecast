@@ -35,7 +35,7 @@ COPY --from=builder /usr/src/app/dist ./dist
 # EXPOSE 3000 
 
 # Set the environment variable for the webhook URL (can be overridden at runtime)
-ENV WEBHOOK_URL="YOUR_WEBHOOK_URL_HERE"
+ENV WEBHOOK_URL="https://hook.us2.make.com/eikxfa5l798ukmpf8a96jhx2eo6a1a4e"
 ENV NODE_ENV=production
 
 # Command to run the application
