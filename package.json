@@ -1,0 +1,32 @@
+{
+  "name": "daily_forecast",
+  "version": "1.0.0",
+  "description": "Daily weather forecast sender",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [
+    "weather",
+    "forecast",
+    "openmeteo",
+    "docker",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "node-cron": "^3.0.3",
+    "openmeteo": "^1.1.3"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.9.36",
+    "@types/node": "^20.12.2",
+    "@types/node-cron": "^3.0.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  }
+}
